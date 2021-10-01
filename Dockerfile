@@ -6,7 +6,7 @@ FROM node:16-alpine3.11
 WORKDIR /usr/app
 
 # copy the current directory into /usr/app
-COPY ./ /usr/app
+COPY ./ ./
 
 # install some dependencies
 RUN npm install
