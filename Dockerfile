@@ -5,10 +5,13 @@ FROM node:16-alpine3.11
 WORKDIR /usr/app
 
 # copy the current directory into /usr/app
-COPY ./ ./
+COPY ./package.json ./
 
 # install some dependencies
 RUN npm install
+
+# copy rest of the files
+COPY ./ ./
 
 # set a default command
 CMD ["npm","start"]
